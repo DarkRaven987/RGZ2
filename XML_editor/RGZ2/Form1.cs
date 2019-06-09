@@ -27,22 +27,17 @@ namespace RGZ2
             richTextBox1.Text = "";
             richTextBox1.Text = fileText;
 
-            int start = -1, finish = -1, n = 0;
+            int start = -1, finish = -1;
 
             for (int i = 0; i < fileText.Length; i++)
             {
-
-                if (fileText[i] == '\n')
-                {
-                    n++;
-                }
                 if (fileText[i] == '<')
                 {
-                    start = i - n;
+                    start = i;
                 }
                 if (fileText[i] == '>')
                 {
-                    finish = i + 1 - n;
+                    finish = i + 1;
                 }
                 if ((start != -1) && (finish != -1))
                 {
@@ -62,6 +57,11 @@ namespace RGZ2
             string filename = saveFileDialog1.FileName;
             // сохраняем текст в файл
             System.IO.File.WriteAllText(filename, richTextBox1.Text);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
