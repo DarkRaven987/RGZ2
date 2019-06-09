@@ -19,3 +19,10 @@ F:\rgz\RGZ2\XML_editor\RGZ2\bin\Debug\RGZ2.pdb
 F:\rgz\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.Form1.resources
 F:\rgz\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.Properties.Resources.resources
 F:\rgz\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.csproj.GenerateResource.Cache
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.exe
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.pdb
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\bin\Debug\RGZ2.exe
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\bin\Debug\RGZ2.pdb
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.Form1.resources
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.Properties.Resources.resources
+D:\Univer\Курсач\RGZ2\XML_editor\RGZ2\obj\x86\Debug\RGZ2.csproj.GenerateResource.Cache

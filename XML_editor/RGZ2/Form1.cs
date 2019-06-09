@@ -27,17 +27,21 @@ namespace RGZ2
             richTextBox1.Text = "";
             richTextBox1.Text = fileText;
 
-            int start = -1, finish = -1;
+            int start = -1, finish = -1, n=0;
 
             for (int i = 0; i < fileText.Length; i++)
             {
+                if (fileText[i] == '\n')
+                {
+                    n++;
+                }
                 if (fileText[i] == '<')
                 {
-                    start = i;
+                    start = i-n;
                 }
                 if (fileText[i] == '>')
                 {
-                    finish = i + 1;
+                    finish = i + 1-n;
                 }
                 if ((start != -1) && (finish != -1))
                 {
