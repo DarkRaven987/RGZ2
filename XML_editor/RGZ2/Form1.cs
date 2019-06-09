@@ -24,16 +24,34 @@ namespace RGZ2
             string filename = openFileDialog1.FileName;
             // читаем файл в строку
             string fileText = System.IO.File.ReadAllText(filename);
+            richTextBox1.Text = "";
             richTextBox1.Text = fileText;
-            int start = richTextBox1.Find("<");
-            int finish = richTextBox1.Find(">");
-            //выделяем до конца текста
-            richTextBox1.Select(start, finish+1 - start);
-            //в выделенный фрагмент устанавливаем шрифт, созданный из имеющегося, 
-            //но со стилем Bold - жирный
-            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, FontStyle.Bold);
-            //сбрасываем выделение, тут в начало текста
-            richTextBox1.Select(0, 0);
+
+            int start = -1, finish = -1, n = 0;
+
+            for (int i = 0; i < fileText.Length; i++)
+            {
+
+                if (fileText[i] == '\n')
+                {
+                    n++;
+                }
+                if (fileText[i] == '<')
+                {
+                    start = i - n;
+                }
+                if (fileText[i] == '>')
+                {
+                    finish = i + 1 - n;
+                }
+                if ((start != -1) && (finish != -1))
+                {
+                    richTextBox1.Select(start, finish - start);
+                    richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, FontStyle.Bold);
+                    richTextBox1.Select(0, 0);
+                    start = -1; finish = -1;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
