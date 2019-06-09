@@ -1,0 +1,4 @@
+D:\ZNTU\RGZ2\RGZ2\RGZ2\bin\Debug\RGZ2.exe
+D:\ZNTU\RGZ2\RGZ2\RGZ2\bin\Debug\RGZ2.pdb
+D:\ZNTU\RGZ2\RGZ2\RGZ2\obj\x86\Debug\RGZ2.exe
+D:\ZNTU\RGZ2\RGZ2\RGZ2\obj\x86\Debug\RGZ2.pdb
