@@ -1,7 +1,0 @@
-D:\ZNTU\RGZ2\RGZ2\bin\Debug\RGZ2.exe
-D:\ZNTU\RGZ2\RGZ2\bin\Debug\RGZ2.pdb
-D:\ZNTU\RGZ2\RGZ2\obj\x86\Debug\RGZ2.Form1.resources
-D:\ZNTU\RGZ2\RGZ2\obj\x86\Debug\RGZ2.Properties.Resources.resources
-D:\ZNTU\RGZ2\RGZ2\obj\x86\Debug\RGZ2.csproj.GenerateResource.Cache
-D:\ZNTU\RGZ2\RGZ2\obj\x86\Debug\RGZ2.exe
-D:\ZNTU\RGZ2\RGZ2\obj\x86\Debug\RGZ2.pdb
