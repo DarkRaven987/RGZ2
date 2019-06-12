@@ -16,6 +16,9 @@ namespace RGZ2
             InitializeComponent();
         }
 
+        string[] words;
+        string[] tags;
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
@@ -27,21 +30,17 @@ namespace RGZ2
             richTextBox1.Text = "";
             richTextBox1.Text = fileText;
 
-            int start = -1, finish = -1, n=0;
+            int start = -1, finish = -1;
 
             for (int i = 0; i < fileText.Length; i++)
             {
-                if (fileText[i] == '\n')
-                {
-                    n++;
-                }
                 if (fileText[i] == '<')
                 {
-                    start = i-n;
+                    start = i;
                 }
                 if (fileText[i] == '>')
                 {
-                    finish = i + 1-n;
+                    finish = i + 1;
                 }
                 if ((start != -1) && (finish != -1))
                 {
@@ -51,6 +50,7 @@ namespace RGZ2
                     start = -1; finish = -1;
                 }
             }
+            words = richTextBox1.Text.Split('<', '>');
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -60,12 +60,46 @@ namespace RGZ2
             // получаем выбранный файл
             string filename = saveFileDialog1.FileName;
             // сохраняем текст в файл
-            System.IO.File.WriteAllText(filename, richTextBox1.Text);
+            foreach (char s in richTextBox1.Text)
+            {
+                //MessageBox.Show(" " + s);
+            }
+            //System.IO.File.WriteAllText(filename, richTextBox1.Text);
+            System.IO.File.AppendAllText(filename, richTextBox1.Text);
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            //int n = 0, min=-1, max=-1;
+            tags = richTextBox2.Text.Split('\n');
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i] == textBox2.Text)
+                {
+                    words[i + 1] = textBox3.Text;
+                }
+                richTextBox1.Text += words[i];
+                /*if ((words[i]==tags[n])&&(tags[n+1]=="")&&(min==-1))
+                {
+                    min = i;
+                }
+                else if ((words[i] == '/'+ tags[n]) && (tags[n + 1] == "") && (max == -1))
+                {
+                    max = i;
+                }
+                if ((min != -1) && (max != -1))
+                {
+                    n += 2;
+                    break;
+                }*/
+            }
+           
         }
     }
 }
