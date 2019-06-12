@@ -1,10 +1,10 @@
-<medicines>
+<medicines> 
 
-<medicine><name>Цитрамон</name>
+<medicine><name>Цитрамон</name> 
 
-  <company>ТОВ Медсервис</company>
+<company>ТОВ Медсервис</company> 
 
-  <sale>
+<sale>
 
         <price>50 UAH</price>
 
