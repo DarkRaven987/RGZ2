@@ -16,9 +16,6 @@ namespace RGZ2
             InitializeComponent();
         }
 
-        string[] words;
-        string[] tags;
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
@@ -50,7 +47,6 @@ namespace RGZ2
                     start = -1; finish = -1;
                 }
             }
-            words = richTextBox1.Text.Split('<', '>');
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,8 +60,7 @@ namespace RGZ2
             {
                 //MessageBox.Show(" " + s);
             }
-            //System.IO.File.WriteAllText(filename, richTextBox1.Text);
-            System.IO.File.AppendAllText(filename, richTextBox1.Text);
+            System.IO.File.WriteAllText(filename, richTextBox1.Text);
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -75,31 +70,35 @@ namespace RGZ2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            //int n = 0, min=-1, max=-1;
-            tags = richTextBox2.Text.Split('\n');
-            for (int i = 0; i < words.Length; i++)
+            string s1 = textBox2.Text;
+            string s2 = textBox3.Text;
+            richTextBox1.Text = richTextBox1.Text.Replace(s1, s2);
+            int start = -1, finish = -1;
+
+            richTextBox1.Font = new Font(richTextBox1.Font, richTextBox1.Font.Style | FontStyle.Regular);
+            for (int i = 0; i < richTextBox1.Text.Length; i++)
             {
-                if (words[i] == textBox2.Text)
+                if (richTextBox1.Text[i] == '<')
                 {
-                    words[i + 1] = textBox3.Text;
+                    start = i;
                 }
-                richTextBox1.Text += words[i];
-                /*if ((words[i]==tags[n])&&(tags[n+1]=="")&&(min==-1))
+                if (richTextBox1.Text[i] == '>')
                 {
-                    min = i;
+                    finish = i + 1;
                 }
-                else if ((words[i] == '/'+ tags[n]) && (tags[n + 1] == "") && (max == -1))
+                if ((start != -1) && (finish != -1))
                 {
-                    max = i;
+                    richTextBox1.Select(start, finish - start);
+                    richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, FontStyle.Bold);
+                    richTextBox1.Select(0, 0);
+                    start = -1; finish = -1;
                 }
-                if ((min != -1) && (max != -1))
-                {
-                    n += 2;
-                    break;
-                }*/
             }
+        }
            
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

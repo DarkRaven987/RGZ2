@@ -35,13 +35,13 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Редактировать";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -105,39 +106,22 @@
             this.panel1.Size = new System.Drawing.Size(606, 159);
             this.panel1.TabIndex = 4;
             // 
-            // label2
+            // button4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 52);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Введите теги и условия поиска\r\n(попарно тег-условие, если у \r\nтега нет условия пр" +
-    "опустите \r\nодну строку)";
+            this.button4.Location = new System.Drawing.Point(445, 123);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Изменить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // richTextBox2
+            // textBox3
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(214, 15);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(146, 131);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(388, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Введите тег значение которого нужно\r\nизменить\r\n";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(391, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBox3.Location = new System.Drawing.Point(391, 94);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(198, 20);
+            this.textBox3.TabIndex = 7;
             // 
             // label4
             // 
@@ -148,22 +132,39 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Введите новое значение";
             // 
-            // textBox3
+            // textBox2
             // 
-            this.textBox3.Location = new System.Drawing.Point(391, 94);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBox2.Location = new System.Drawing.Point(391, 44);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(198, 20);
+            this.textBox2.TabIndex = 5;
             // 
-            // button4
+            // label3
             // 
-            this.button4.Location = new System.Drawing.Point(445, 123);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Изменить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(388, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(201, 26);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Введите тег значение которого нужно\r\nизменить\r\n";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(214, 15);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(146, 131);
+            this.richTextBox2.TabIndex = 3;
+            this.richTextBox2.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 52);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Введите теги и условия поиска\r\n(попарно тег-условие, если у \r\nтега нет условия пр" +
+                "опустите \r\nодну строку)";
             // 
             // Form1
             // 
