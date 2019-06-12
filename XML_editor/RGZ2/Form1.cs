@@ -71,7 +71,7 @@ namespace RGZ2
         private void button4_Click(object sender, EventArgs e)
         {
             string s1 = textBox2.Text;
-            string s2 = textBox3.Text;
+            string s2 = textBox1.Text;
             richTextBox1.Text = richTextBox1.Text.Replace(s1, s2);
             int start = -1, finish = -1;
 
